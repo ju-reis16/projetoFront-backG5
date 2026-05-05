@@ -1,70 +1,72 @@
-import { useState } from "react";
-import "./App.css";
+import { useState } from 'react'
+import Home from './assets/pages/Home'
+import Produtos from './assets/pages/Produtos'
+import Sobre from './assets/pages/Sobre'
+import './App.css'
 
 function App() {
-  const [feriados, setFeriados] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [erro, setErro] = useState("");
+  const [paginaAtual, setPaginaAtual] = useState('home')
 
-  async function buscarFeriados() {
-    setLoading(true);
-    setErro("");
-    setFeriados([]);
-
-    try {
-      const response = await fetch(
-        "https://brasilapi.com.br/api/feriados/v1/2026"
-      );
-
-      if (!response.ok) {
-        throw new Error("Erro ao buscar API");
-      }
-
-      const data = await response.json();
-      setFeriados(data);
-    } catch (error) {
-      setErro("Erro ao carregar os dados.");
-      setErro(error.message)
-    } finally {
-      setLoading(false);
+  const renderizarPagina = () => {
+    switch (paginaAtual) {
+      case 'home':
+        return <Home />
+      case 'produtos':
+        return <Produtos />
+      case 'sobre':
+        return <Sobre />
+      default:
+        return <Home />
     }
   }
 
   return (
-    <div className="container">
-      <h1>📅 Feriados Nacionais 2026</h1>
-
-      <section className="info">
-        <h2> Cliente-Servidor</h2>
-        <p>
-          O navegador (cliente) faz uma requisição para um servidor usando HTTP.
-        </p>
-        <p>  
-          O servidor responde com dados (JSON), que são exibidos na tela.
-        </p>
-      </section>
-
-      <button onClick={buscarFeriados} disabled={loading}>
-        {loading ? "Carregando..." : "Buscar Feriados"}
-      </button>
-
-      {erro && <p className="erro">{erro}</p>}
-
-      {!loading && feriados.length === 0 && !erro && (
-        <p className="mensagem">Clique no botão para buscar os feriados.</p>
-      )}
-
-      <div className="lista">
-        {feriados.map((f, index) => (
-          <div key={index} className="card">
-            <h3>{f.name}</h3>
-            <p><strong>Data:</strong> {f.date}</p>
-            <p><strong>Tipo:</strong> {f.type}</p>
+    <div className="app">
+      <nav className="navbar">
+        <div className="nav-container">
+          <div className="logo">
+            <h1>TECH STORE</h1>
           </div>
-        ))}
-      </div>
+          <ul className="nav-menu">
+            <li>
+              <button
+                className={`nav-link ${paginaAtual === 'home' ? 'ativo' : ''}`}
+                onClick={() => setPaginaAtual('home')}
+              >
+                Home
+              </button>
+            </li>
+            <li>
+              <button
+                className={`nav-link ${paginaAtual === 'produtos' ? 'ativo' : ''}`}
+                onClick={() => setPaginaAtual('produtos')}
+              >
+                Produtos
+              </button>
+            </li>
+            <li>
+              <button
+                className={`nav-link ${paginaAtual === 'sobre' ? 'ativo' : ''}`}
+                onClick={() => setPaginaAtual('sobre')}
+              >
+                Sobre
+              </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <main className="main-content">
+        <div className="container">
+          {renderizarPagina()}
+        </div>
+      </main>
+
+      <footer className="footer">
+        <p>&copy; 2026 Projeto Final - Gerenciador de Produtos. Desenvolvido por alunas do SENAI.</p>
+      </footer>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
