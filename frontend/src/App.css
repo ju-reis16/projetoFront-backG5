@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #6294bd, #9d1c5e);
+  background-repeat: no-repeat;
+}
+
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #042342;
+  margin-bottom: 20px;
+}
+
+.info {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.584);
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 16px;
+  background: #48087c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #031d2e;
+  transform: scale(1.05);
+}
+
+button:disabled {
+  background: gray;
+  cursor: not-allowed;
+  transform: none;
+}
+
+
+.erro {
+  color: #e74c3c;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.mensagem {
+  margin-top: 15px;
+  color: #031e39;
+}
+
+.lista {
+  margin-top: 25px;
+  display: grid;
+  gap: 20px;
+}
+
+.card {
+  background: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #34495e;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
