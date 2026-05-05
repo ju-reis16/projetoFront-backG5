@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import Home from './assets/pages/Home'
-import Produtos from './assets/pages/Produtos'
-import Sobre from './assets/pages/Sobre'
+import Home from './assets/pages/home/Home'
+import Produtos from './assets/pages/produto/Produtos'
+import Sobre from './assets/pages/sobre/Sobre'
 import './App.css'
 
 function App() {

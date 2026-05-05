@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { produtoAPI } from '../../api'
+import { produtoAPI } from '../../services/api'
 import './produto.css'
 
 export default function Produtos() {
