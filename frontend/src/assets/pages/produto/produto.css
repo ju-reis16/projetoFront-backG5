@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Geostar&display=swap');
+
+.page-produtos {
+  padding: 30px;
+  font-family: Arial, sans-serif;
+}
+
+.page-produtos h1 {
+  margin-bottom: 20px;
+  font-family: "Geostar", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.btn-novo {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.btn-novo:hover {
+  background: #45a049;
+}
+
+.btn-editar {
+  background: #2196F3;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-deletar {
+  background: #f44336;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.alerta {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.alerta.sucesso {
+  background: #d4edda;
+  color: #155724;
+}
+
+.alerta.erro {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.btn-fechar-alerta {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+
+.produtos-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.produto-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 350px;
+  height: 200px;
+}
+
+.preco {
+  color: green;
+  font-weight: bold;
+}
+
+.estoque.ok { color: green; }
+.estoque.baixo { color: orange; }
+.estoque.zero { color: red; }
+
+.card-footer {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+@keyframes aparecer {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.modal-content {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  width: 500px; 
+  max-width: 90%;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  animation: aparecer 0.25s ease;
+}
+
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modal-header h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+
+.btn-fechar {
+  background: #f1f1f1;
+  border: none;
+  font-size: 18px;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-fechar:hover {
+  background: #ddd;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  transition: 0.2s;
+  font-size: 14px;
+}
+
+.form-group input:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+  outline: none;
+}
+
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.form-actions {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-salvar {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.btn-salvar:hover {
+  background: #43a047;
+  transform: scale(1.05);
+}
+
+.btn-cancelar {
+  background: #9e9e9e;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-cancelar:hover {
+  background: #757575;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: 0.2s;
+}
+
+.form-group input:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+}
+
+
+.input-erro {
+  border: 1px solid red;
+}
+
+.erro-campo {
+  color: red;
+  font-size: 12px;
+}
+
+
+.form-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-salvar {
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-salvar:hover {
+  background: #43a047;
+}
+
+.btn-cancelar {
+  background: #9e9e9e;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-cancelar:hover {
+  background: #757575;
+}
+
+
+.estado-vazio {
+  text-align: center;
+  margin-top: 20px;
+  color: #333;
+}
+
+
+.spinner {
+  display: none;
+}
+
+.card-header .id-badge {
+  font-size: 10px;
+  background: #eeeeee3e;
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+
+
+.card-header{
+  background-color: #c7d8e6;
+  color:white;
+  padding: 15px;
+  gap:10px;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
