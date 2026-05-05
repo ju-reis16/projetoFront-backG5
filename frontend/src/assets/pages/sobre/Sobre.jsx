@@ -53,21 +53,22 @@ export default function Sobre() {
             <div className="tech-item">
               <h3>Manuela</h3>
               <ul>
-                <li>Dedicada e comprometida</li>
-                <li>Busca constante aprendizado</li>
-                <li>Tem espírito de equipe</li>
-                <li>Contribui para o bom andamento do projeto</li>
+                <li>Foco em organização e planejamento</li>
+                <li>Boa comunicação com a equipe</li>
+                <li>Proativa na resolução de problemas</li>
+                <li>Atenta aos detalhes</li>
               </ul>
-            </div>
+              </div>
+
             <div className="tech-item">
               <h3>Sofia</h3>
               <ul>
-                <li>Dedicada e comprometida</li>
-                <li>Busca constante aprendizado</li>
-                <li>Tem espírito de equipe</li>
-                <li>Contribui para o bom andamento do projeto</li>
+                <li>Criativa e inovadora</li>
+                <li>Aprende rápido novas tecnologias</li>
+                <li>Colabora bem em equipe</li>
+                <li>Ajuda a manter o ritmo do projeto</li>
               </ul>
-            </div>
+            </div>    
           </div>
         </secitons>
 
